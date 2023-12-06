@@ -1,4 +1,4 @@
-package com.demo.bank.dto;
+package com.demo.auth.dto;
 
 import java.io.Serializable;
 
@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class LoginRequest implements Serializable{
+public class LoginRequestDto implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 	private String username;

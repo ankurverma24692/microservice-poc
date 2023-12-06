@@ -50,8 +50,8 @@ public class UserController {
 	}
 
 	// create User rest api
-	@PostMapping("/getUserByUsername")
-	public List<User> getUserByUsername(@RequestBody LoginRequest username) {
+	@PostMapping("/getUserByUsername/{username}")
+	public List<User> getUserByUsername(@PathVariable LoginRequest username) {
 		return userServiceImpl.getUserByUserName(username);
 	}
 }
