@@ -1,5 +1,5 @@
 server:
- port: 8080
+ port: 8081
  
 spring:
   jpa:
@@ -13,3 +13,17 @@ spring:
     username: postgres
     password: postgres
     driverClassName: org.postgresql.Driver
+  kafka:
+    consumer:
+      bootstrap-servers: localhost:9092
+      group-id: bank
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring:
+           json:
+             trusted:
+               packages: '*'
+    topic:
+      name: bank_topics

@@ -41,7 +41,7 @@ public class AuthServiceImpl implements AuthService {
 
 	@Override
 	public ResponseEntity<TokenDto> generateToken(LoginRequestDto logRequest) {
-		String validateUserUri = "http://localhost:9806/user/api/v1/verify";
+		String validateUserUri = "http://localhost:9800/oauth2/verify-token";
 
 		ResponseEntity<LoginResponseDto> loginResponse = restTemplate.postForEntity(validateUserUri,
 				new HttpEntity<LoginRequestDto>(logRequest), LoginResponseDto.class);

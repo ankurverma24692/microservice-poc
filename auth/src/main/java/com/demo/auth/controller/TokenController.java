@@ -14,7 +14,7 @@ import com.demo.auth.dto.TokenDto;
 import com.demo.auth.service.AuthService;
 
 @RestController
-@RequestMapping("/oauth2")
+@RequestMapping(path = "/oauth2")
 public class TokenController {
 
 	private final AuthService authService;
